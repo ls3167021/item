@@ -2,9 +2,10 @@
 var gulp = require('gulp');             // 基础库
 // 引入gulp插件
 var  webserver = require('gulp-webserver'), // 本地服务器
+    livereload = require('gulp-livereload'),//自动刷新
     sass=require("gulp-ruby-sass"),         //sass编译插件
-    uglify=require("gulp-uglify"),          //压缩js脚本
-    rename=require("gulp-rename"),          //引入min写法压缩文件名称
+    //uglify=require("gulp-uglify"),          //压缩js脚本
+    //rename=require("gulp-rename"),          //引入min写法压缩文件名称
     imagemin=require("gulp-imagemin"),       //压缩图片
     pngquant=require("imagemin-pngquant");  //对png图片进行深度压缩的插件
 
@@ -32,14 +33,28 @@ gulp.task("sass",function(){
 });
 
 //注册js压缩的任务
+//gulp.task("script",function(){
+//    return gulp.src("src/js/**/*.")
+//        .pipe(uglify())
+//        .pipe(rename({suffix:".min"}))
+//        .pipe(gulp.dest("dist/js"))
+//});
 gulp.task("script",function(){
-    return gulp.src("src/js/**/*.js")
-        .pipe(uglify())
-        .pipe(rename({suffix:".min"}))
-        .pipe(gulp.dest("dist/js"))
+    gulp.src("src/js/**/*.*")
+        //.pipe(gulpJs())
+        // .pipe(uglify({preserveComments:"some"}))
+        .pipe(gulp.dest("dist/js"));
+
+    // .pipe(browserSync.reload({
+    //     stream: true
+    // }))
 });
-
-
+//gulp.task("script",function(){
+//    return gulp.src("src/js/**/*.")
+//        .pipe(rename({suffix:'.min'}))
+//        .pipe(uglify({preserveComments:'some'}))
+//        .pipe(gulp.dest('dist/js'));
+//});
 
 //注册压缩图片任务
 gulp.task("imagemin",function(){
@@ -52,10 +67,20 @@ gulp.task("imagemin",function(){
         .pipe(gulp.dest("dist/images"));     //输出路径
 });
 
+// 监听任务
+gulp.task('watch',function(){
+    // 监听 html
+    gulp.watch('src/**/*.html', ['html']);
+    // 监听 scss
+    gulp.watch('src/sass/*.scss', ['sass']);
+    // 监听 images
+    gulp.watch('src/images/**/*.{png,jpg,gif,svg}', ['imagemin']);
+    // 监听 js
+    gulp.watch('src/js/*.js', ['script']);
+});
+
 // 默认任务
-gulp.task('default',["sass","script","imagemin","html","webserver"]);
-
-
+gulp.task('default',["sass","script","imagemin","html","webserver","watch"]);
 
 
 
