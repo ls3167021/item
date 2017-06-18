@@ -131,7 +131,7 @@ a{
 
 
 #selection{
-  height: 500px;
+  //height: 500px;
   .menu{
     width: $marginwidth;
     margin: auto;
@@ -140,6 +140,8 @@ a{
       width: 130px;
       height: 35px;
       border: 1px solid green;
+      text-align: center;
+      line-height: 35px;
     }
     .two{
       width: 430px;
@@ -151,6 +153,55 @@ a{
       background-color: green;
       color: white;
       margin-left: -5px;
+    }
+  }
+  i{
+    display: inline-block;
+    width: 0;
+    height:0;
+    border-top: 4px solid green;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    margin-top: -10px;
+  }
+}
+
+#datas{
+  width: $marginwidth;
+  height: 800px;
+  border:1px solid red;
+  margin: auto;
+  .menu{
+    float: left;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    .drop{
+      width: 100%;
+      height: 50px;
+      border: 1px solid white;
+      background-color: #F7F7F7;
+      line-height: 50px;
+      ul{
+        float: left;
+        li{
+          float: left;
+          width: 100px;
+          text-align: center;
+          a{
+            color: #666666;
+          }
+        }
+      }
+      .right{
+        width: 80px;
+        height: 35px;
+        background-color: white;
+        margin-right: 20px;
+        margin-top: 5px;
+        text-align: center;
+        line-height: 35px;
+      }
     }
   }
 }
