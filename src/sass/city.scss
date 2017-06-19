@@ -131,7 +131,6 @@ a{
 
 
 #selection{
-  //height: 500px;
   .menu{
     width: $marginwidth;
     margin: auto;
@@ -143,13 +142,17 @@ a{
       text-align: center;
       line-height: 35px;
     }
+    .ones{
+      margin-left: 20px;
+    }
     .two{
-      width: 430px;
+      width: 490px;
       height: 35px;
       border: 1px solid green;
+      margin-left: 20px;
     }
     .search{
-      padding: 10px 30px;
+      padding: 10px 40px;
       background-color: green;
       color: white;
       margin-left: -5px;
@@ -168,29 +171,38 @@ a{
 
 #datas{
   width: $marginwidth;
-  height: 800px;
-  border:1px solid red;
+  height: 1000px;
+  //border:1px solid red;
   margin: auto;
   .menu{
     float: left;
-    width: 800px;
+    width: 900px;
     height: 500px;
-    border: 1px solid black;
+    //border: 1px solid black;
     .drop{
+      margin-top: 25px;
       width: 100%;
       height: 50px;
-      border: 1px solid white;
+      border: 1px solid #E6E6E6;
       background-color: #F7F7F7;
       line-height: 50px;
       ul{
         float: left;
+        height: 100%;
         li{
           float: left;
-          width: 100px;
+          width: 120px;
+          height: 100%;
           text-align: center;
           a{
             color: #666666;
           }
+        }
+        .bgdrop{
+          background-color: white;
+            a{
+              color: green;
+            }
         }
       }
       .right{
@@ -203,9 +215,98 @@ a{
         line-height: 35px;
       }
     }
+    .imgbox img{
+      width: 100px;
+      height: 100px;
+    }
+    .datafirst{
+      width: 100%;
+      height: 130px;
+      border-bottom: 1px solid gainsboro;
+      margin-top: 10px;
+        &:hover{
+          background-color: rgb(250,250,250);
+          .goshop{
+            display: block;
+          }
+        }
+        a{
+          color: green;
+        }
+        .goshop{
+          width: 140px;
+          height: 40px;
+          border: 1px solid green;
+          float: right;
+          color: green;
+          font-size: 20px;
+          line-height: 40px;
+          text-align: center;
+          margin-top: 50px;
+          margin-right: 10px;
+          display: none;
+        }
+    }
+  }
+  .pages{
+    margin-top: 20px;
+    margin-left: 130px;
+    span{
+      padding: 15px 20px;
+      border:1px solid #9F9F9F;
+      color: #9F9F9F;
+      text-align: center;
+      cursor: pointer;
+    }
+    .pageone{
+      background-color: #FC6621;
+      color: white;
+    }
+  }
+  .menuright{
+    width: 260px;
+    height: 800px;
+    //border: 1px solid red;
+    margin-top: 25px;
+      .title{
+        width: 100%;
+        height: 50px;
+        background-color: #F7F7F7;
+          p{
+            text-align: center;
+            font-size: 20px;
+            line-height: 50px;
+          }
+      }
+      .goodone{
+        width: 100%;
+        height: 100px;
+        border-bottom: 1px solid #E6E6E6;
+        .goodnumber{
+          margin-top: 30px;
+          margin-left: 20px;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 2px solid red;
+          color: red;
+          line-height: 30px;
+          font-size: 20px;
+          text-align: center;
+          font-weight: 700;
+        }
+        .goodimg{
+          margin-left: 20px;
+          width: 50px;
+          height: 50px;
+          border: 1px solid gainsboro;
+          a{
+            color: purple;
+          }
+        }
+      }
   }
 }
-
 #bottom{
   background-color: #FAFAFA;
   .top{
