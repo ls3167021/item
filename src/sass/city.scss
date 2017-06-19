@@ -131,6 +131,10 @@ a{
 
 
 #selection{
+<<<<<<< HEAD
+=======
+  height: 500px;
+>>>>>>> 5782d35562f2aabcae4e0876ad28d2f31da1025a
   .menu{
     width: $marginwidth;
     margin: auto;
@@ -139,6 +143,7 @@ a{
       width: 130px;
       height: 35px;
       border: 1px solid green;
+<<<<<<< HEAD
       text-align: center;
       line-height: 35px;
     }
@@ -153,11 +158,22 @@ a{
     }
     .search{
       padding: 10px 40px;
+=======
+    }
+    .two{
+      width: 430px;
+      height: 35px;
+      border: 1px solid green;
+    }
+    .search{
+      padding: 10px 30px;
+>>>>>>> 5782d35562f2aabcae4e0876ad28d2f31da1025a
       background-color: green;
       color: white;
       margin-left: -5px;
     }
   }
+<<<<<<< HEAD
   i{
     display: inline-block;
     width: 0;
@@ -307,6 +323,10 @@ a{
       }
   }
 }
+=======
+}
+
+>>>>>>> 5782d35562f2aabcae4e0876ad28d2f31da1025a
 #bottom{
   background-color: #FAFAFA;
   .top{
