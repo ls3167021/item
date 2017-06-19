@@ -1,0 +1,12 @@
+$unit:0px;
+$one:1;
+$color-one:#f7f7f7;
+*{
+  padding:$unit;
+  margin:$unit;
+}
+header{
+  width:$one*100;
+  height:$unit+32;
+  background: $color-one;
+}
